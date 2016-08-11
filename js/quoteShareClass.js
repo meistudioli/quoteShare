@@ -40,7 +40,7 @@ qsExt = {
 				this.params.t = (e.t) ? e.t.textContent : '';
 
 				//css
-				createCSSClass(this.conf.id, 'position:absolute;font-size:2vmin;line-height:2.5;color:#4b4f56;background:#fff;border:1px solid #e5e5e5;padding:0 .45em;border-radius:.33em;box-shadow:0 2px 10px rgba(0,0,0,.3);z-index:1000;'+e.aniBefore);
+				createCSSClass(this.conf.id, 'position:absolute;font-size:2vmin;line-height:2.5;color:#4b4f56;font-family:arial,helvetica,clean,sans-serif,Microsoft JhengHei,\\5FAE\\8EDF\\6B63\\9ED1\\9AD4;background:#fff;border:1px solid #e5e5e5;padding:0 .45em;border-radius:.33em;box-shadow:0 2px 10px rgba(0,0,0,.3);z-index:1000;'+e.aniBefore);
 				createCSSClass(this.conf.id+' span', 'position:relative;padding-left:2.05em;display:block;white-space:nowrap;');
 				createCSSClass(this.conf.id+' span:before', 'position:absolute;left:0;top:50%;content:\'\';width:1.6em;height:1.6em;margin-top:-.8em;background-size:100%;background-repeat:no-repeat;display:block;background-image:url(\'data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSczMicgaGVpZ2h0PSczMicgdmlld0JveD0nMCAwIDMyIDMyJz48cGF0aCBmaWxsPScjM0I1OTk4JyBkPSdNMjYuNjY3IDBINS4zMzNDMi4zODggMCAwIDIuMzg4IDAgNS4zMzR2MjEuMzMyQzAgMjkuNjEgMi4zODcgMzIgNS4zMzMgMzJIMTZWMThoLTR2LTRoNHYtM2MwLTIuNzYgMi4yNC01IDUtNWg1djRoLTVjLS41NTIgMC0xIC40NDgtMSAxdjNoNS41bC0xIDRIMjB2MTRoNi42NjdDMjkuNjEgMzIgMzIgMjkuNjEgMzIgMjYuNjY2VjUuMzM0QzMyIDIuMzg4IDI5LjYxMyAwIDI2LjY2NyAweicvPjwvc3ZnPg==\');');
 				createCSSClass(this.conf.id+':before', 'content:\'\';position:absolute;left:50%;top:100%;border:.7em solid transparent;border-top-color:#e5e5e5;margin-left:-.7em;');
