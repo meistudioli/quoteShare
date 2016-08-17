@@ -66,7 +66,7 @@ qsExt = {
 				e.sets = [];
 				for (var i in this.trigger) if (/^id$|^classname$/i.test(i)) e.sets.push(i.toLowerCase());
 				e.idFirst = (e.sets[0] == 'id' || isCSSSupport('-moz-appearance')) ? true : false;
-				this.maneuver = (e.idFirst) ? this.conf.id + '.maneuver' : '.maneuver' + this.conf.id;
+				this.maneuver = (e.idFirst) ? this.conf.id + '.maneuver-qs' : '.maneuver-qs' + this.conf.id;
 
 				//evt
 				this.trigger.addEventListener('click', qsExt.eAct, false);
@@ -94,7 +94,7 @@ qsExt = {
 				stopEvents(e);
 				break;
 			case 'mousedown':
-				if (eTrack(obj.t, 'maneuver', 'c')) {
+				if (eTrack(obj.t, 'maneuver-qs', 'c')) {
 					qsExt.triggerDown = true;
 				} else {
 					qsExt.triggerDown = false;
@@ -102,7 +102,7 @@ qsExt = {
 				}//end if
 				break;
 			default:
-				if (obj.a == 'mouseup' && qsExt.triggerDown && eTrack(obj.t, 'maneuver', 'c')) {
+				if (obj.a == 'mouseup' && qsExt.triggerDown && eTrack(obj.t, 'maneuver-qs', 'c')) {
 					//trigget click
 					qsExt.toggle(false);
 					qsExt.show();
@@ -144,8 +144,14 @@ qsExt = {
 	toggle: function(flag) {
 		var act;
 
+		if (flag) act = 'add';
+		else {
+			act = 'remove';
+			qsExt.params.quote = '';
+		}//end if
+
 		act = (flag) ? 'add' : 'remove';
-		qsExt.trigger.classList[act]('maneuver');
+		qsExt.trigger.classList[act]('maneuver-qs');
 		qsExt.trigger.classList[act]('act');
 	},
 	show: function() {
