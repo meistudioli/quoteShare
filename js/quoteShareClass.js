@@ -144,12 +144,6 @@ qsExt = {
 	toggle: function(flag) {
 		var act;
 
-		if (flag) act = 'add';
-		else {
-			act = 'remove';
-			qsExt.params.quote = '';
-		}//end if
-
 		act = (flag) ? 'add' : 'remove';
 		qsExt.trigger.classList[act]('maneuver-qs');
 		qsExt.trigger.classList[act]('act');
